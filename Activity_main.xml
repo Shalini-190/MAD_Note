@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/noteInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_note_input"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:autofillHints="text"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#FFA000" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button_text"
+        android:textColor="#000000"
+        android:backgroundTint="#FFA000"
+        android:layout_gravity="center_horizontal"
+        android:minHeight="48dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/rollNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/roll_numbers"
+        android:textColor="#000000"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:background="#FFE082"
+        android:layout_marginBottom="8dp" />
+
+    <ListView
+        android:id="@+id/notesList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/note_item" />
+</LinearLayout>
